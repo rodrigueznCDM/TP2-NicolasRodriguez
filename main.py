@@ -6,7 +6,6 @@ def jeuDevinettes():
 
     print("J’ai choisi un nombre au hasard entre 0 et 1000, à vous de le deviner...")
     randNum = random.randint(0,1000)
-    print("\nDebug: le nombre est", randNum)
 
     win = False
     nbEssai = 0
