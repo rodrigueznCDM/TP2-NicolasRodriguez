@@ -1,14 +1,21 @@
+"""
+Nom: Nicolas Rodriguez
+Groupe: 406
+Description: Jeu de devinettes
+"""
+
 print("TP2 - Jeu de Devinettes\n")
 
 import random
 
-def jeuDevinettes():
+
+def jeu_devinettes():
 
     print("J’ai choisi un nombre au hasard entre 0 et 1000, à vous de le deviner...")
-    randNum = random.randint(0,1000)
+    randNum = random.randint(0, 1000)
 
     win = False
-    nbEssai = 0
+    nb_essais = 0
 
     while not win:
 
@@ -20,25 +27,26 @@ def jeuDevinettes():
                 essai = int(input("\nEntrez votre essai:\n"))
 
                 if essai == randNum:
-                    nbEssai = nbEssai + 1
+                    nb_essais += 1
                     print("\nBravo! Bonne réponse")
-                    print("\nVous avez réussi en", nbEssai, "essai(s)")
+                    print("\nVous avez réussi en", nb_essais, "essai(s)")
                     win = True
 
                 elif essai < randNum:
-                    nbEssai = nbEssai + 1
+                    nb_essais += 1
                     print("\nMauvais choix, le nombre est plus petit que", essai)
 
                 elif essai > randNum:
-                    nbEssai = nbEssai + 1
+                    nb_essais += 1
                     print("\nMauvais choix, le nombre est plus grand que", essai)
 
             except ValueError:
-                nbEssai = nbEssai + 1
+                nb_essais += 1
                 print("\nEntrez un nombre! Je compterais ceci comme un essai")
 
 
-jeuDevinettes()
+jeu_devinettes()
+
 
 while True:
 
@@ -47,7 +55,7 @@ while True:
     rejouer = rejouer.lower()
 
     if rejouer == "oui" or rejouer == "o":
-        jeuDevinettes()
+        jeu_devinettes()
 
     elif rejouer == "non" or rejouer == "n":
         exit("\nMerci et au revoir!")
