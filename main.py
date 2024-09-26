@@ -4,9 +4,9 @@ Groupe: 406
 Description: Jeu de devinettes
 """
 
-print("TP2 - Jeu de Devinettes\n")
-
 import random
+
+print("TP2 - Jeu de Devinettes\n")
 
 
 def jeu_devinettes():
